@@ -1,0 +1,38 @@
+# Multi-Agent RAG System - Python Dependencies
+# Optimized for Vercel serverless deployment
+
+# ============================================================================
+# WEB FRAMEWORK (Required for Vercel)
+# ============================================================================
+flask==3.0.0
+flask-cors==4.0.0
+
+# ============================================================================
+# SEARCH & APIs (Lightweight, serverless-friendly)
+# ============================================================================
+exa-py==1.0.9
+requests>=2.31.0
+
+# ============================================================================
+# UTILITIES
+# ============================================================================
+python-dotenv>=1.0.0
+
+# ============================================================================
+# OPTIONAL: For local development only
+# (Comment out for Vercel deployment if size is an issue)
+# ============================================================================
+# pydantic>=2.0.0
+
+# ============================================================================
+# NOTE: Heavy ML dependencies below are NOT included for Vercel
+# Install these ONLY for local development
+# ============================================================================
+# torch>=2.1.0
+# transformers>=4.35.0
+# sentence-transformers>=2.2.2
+# accelerate>=0.25.0
+# langchain>=0.1.0
+# faiss-cpu>=1.7.4
+#
+# For local dev, create requirements-local.txt with full dependencies
