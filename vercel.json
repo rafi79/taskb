@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "name": "multi-agent-rag",
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.py"
+    }
+  ],
+  "env": {
+    "HUGGINGFACE_TOKEN": "@huggingface-token",
+    "EXA_API_KEY": "@exa-api-key",
+    "DEBUG": "False"
+  },
+  "functions": {
+    "api/index.py": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "regions": ["iad1"]
+}
